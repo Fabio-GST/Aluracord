@@ -46,18 +46,6 @@ function Titulo(props) {
   );
 }
 
-// Componente React
-// function HomePage() {
-//     // JSX
-//     return (
-//         <div>
-//             <GlobalStyle />
-//             <Titulo tag="h2">Boas vindas de volta!</Titulo>
-//             <h2>Discord - Alura Matrix</h2>
-//         </div>
-//     )
-// }
-// export default HomePage
 
 export default function PaginaInicial() {
   const username = 'Fabio-GST';
@@ -75,62 +63,21 @@ export default function PaginaInicial() {
       >
         <Box
           styleSheet={{
-            display: 'flex',
             alignItems: 'center',
-            justifyContent: 'space-between',
-            flexDirection: {
-              xs: 'column',
-              sm: 'row',
-            },
-            width: '100%', maxWidth: '700px',
-            borderRadius: '5px', padding: '32px', margin: '16px',
+            justifyContent: 'center',
+            width: '100%', maxWidth: '500px',
+            borderRadius: '15px', padding: '32px',
             boxShadow: '0 2px 10px 0 rgb(0 0 0 / 20%)',
             backgroundColor: appConfig.theme.colors.neutrals[700],
           }}
         >
-          {/* Formulário */}
-          <Box
-            as="form"
-            styleSheet={{
-              display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center',
-              width: { xs: '100%', sm: '50%' }, textAlign: 'center', marginBottom: '32px',
-            }}
-          >
-            <Titulo tag="h2">Boas vindas de volta!</Titulo>
-            <Text variant="body3" styleSheet={{ marginBottom: '32px', color: appConfig.theme.colors.neutrals[300] }}>
-              {appConfig.name}
-            </Text>
-
-            <TextField
-              fullWidth
-              textFieldColors={{
-                neutral: {
-                  textColor: appConfig.theme.colors.neutrals[200],
-                  mainColor: appConfig.theme.colors.neutrals[900],
-                  mainColorHighlight: appConfig.theme.colors.primary[500],
-                  backgroundColor: appConfig.theme.colors.neutrals[800],
-                },
-              }}
-            />
-            <Button
-              type='submit'
-              label='Entrar'
-              fullWidth
-              buttonColors={{
-                contrastColor: appConfig.theme.colors.neutrals["000"],
-                mainColor: appConfig.theme.colors.primary[500],
-                mainColorLight: appConfig.theme.colors.primary[400],
-                mainColorStrong: appConfig.theme.colors.primary[600],
-              }}
-            />
-          </Box>
-          {/* Formulário */}
-
-
           {/* Photo Area */}
           <Box
             styleSheet={{
+              marginTop:'32px',
               display: 'flex',
+              marginLeft:'auto',
+              marginRight: 'auto', 
               flexDirection: 'column',
               alignItems: 'center',
               maxWidth: '200px',
@@ -163,6 +110,50 @@ export default function PaginaInicial() {
             </Text>
           </Box>
           {/* Photo Area */}
+
+          {/* Formulário */}
+          <Box
+            as="form"
+            styleSheet={{
+              marginTop:'32px',
+              display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center',
+              width: { xs: '100%', sm: '95%' }, textAlign: 'center', marginBottom: '32px',
+              marginLeft:'auto',
+              marginRight: 'auto', 
+            }}
+          >
+            <Titulo tag="h2">Boas vindas de volta!</Titulo>
+            <Text variant="body3" styleSheet={{ marginBottom: '32px', color: appConfig.theme.colors.neutrals[300]}}>
+              {appConfig.name}
+            </Text>
+
+            <TextField
+              fullWidth
+              textFieldColors={{
+                neutral: {
+                  textColor: appConfig.theme.colors.neutrals[200],
+                  mainColor: appConfig.theme.colors.neutrals[900],
+                  mainColorHighlight: appConfig.theme.colors.primary[500],
+                  backgroundColor: appConfig.theme.colors.neutrals[800],
+                },
+              }}
+            />
+            <Button
+              type='submit'
+              label='Entrar'
+              fullWidth
+              buttonColors={{
+                contrastColor: appConfig.theme.colors.neutrals["000"],
+                mainColor: appConfig.theme.colors.primary[500],
+                mainColorLight: appConfig.theme.colors.primary[400],
+                mainColorStrong: appConfig.theme.colors.primary[600],
+              }}
+            />
+          </Box>
+          {/* Formulário */}
+
+
+          
         </Box>
       </Box>
     </>
