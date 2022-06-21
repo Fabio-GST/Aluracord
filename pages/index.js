@@ -92,7 +92,7 @@ export default function PaginaInicial() {
             onSubmit={function (event) {
               console.log('Submit');
               event.preventDefault();
-              rotas.push("/chat")
+              rotas.push(`/chat?username=${username}`)
             }
 
             }
@@ -112,6 +112,7 @@ export default function PaginaInicial() {
               value={username}
               onChange= {function (event) {
                 const valor = event.target.value;
+
                 setUsername(valor)
                 }}
               fullWidth
